@@ -4,6 +4,6 @@
 /*
  etudiant.h
  fonctions du mode étudiant
- liste des QCM disponibles chargement passation et calcul automatique de la note.
+ liste des QCM disponibles et calcul automatique de la note.
 */
 
