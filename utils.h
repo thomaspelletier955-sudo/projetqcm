@@ -24,6 +24,14 @@
 #define FOND_BL  "\033[44m"
 #define FOND_MG  "\033[45m"
 
+/* Limites */
+#define MAX_NOM          64
+#define MAX_QUESTION     256
+#define MAX_CHOIX        64
+#define MAX_QUESTIONS    50
+#define MAX_PROPOSITIONS 6
+
+
 
 /* ============================================================
  * Structures
