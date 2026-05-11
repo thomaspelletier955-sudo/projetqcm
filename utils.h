@@ -23,3 +23,26 @@
 #define BLANC    "\033[37m"
 #define FOND_BL  "\033[44m"
 #define FOND_MG  "\033[45m"
+
+
+/* ============================================================
+ * Structures
+ * ============================================================ */
+ 
+typedef struct {
+    char intitule[MAX_QUESTION];
+    char propositions[MAX_PROPOSITIONS][MAX_CHOIX];
+    int  nb_propositions;
+    int  bonnes_reponses[MAX_PROPOSITIONS];
+    int  nb_bonnes_reponses;
+} Question;
+ 
+typedef struct {
+    char     nom[MAX_NOM];
+    int      nb_questions;
+    Question questions[MAX_QUESTIONS];
+    int      points_negatifs;
+    int      reponses_multiples;
+    int      mode_sequentiel;
+} QCM;
+
