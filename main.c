@@ -9,7 +9,13 @@
 #include "utils.h"
 #include "enseignant.h"
 #include "etudiant.h"
-
+ 
+int main(void) {
+    int choix, continuer = 1;
+ 
+    /* Cree le dossier qcm/ s'il n'existe pas.
+    */
+    system("mkdir -p " DOSSIER_QCM);
 
 
 
