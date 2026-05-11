@@ -54,3 +54,14 @@ typedef struct {
     int      mode_sequentiel;
 } QCM;
 
+void vider_buffer(void);
+void afficher_separateur(void);
+void afficher_erreur(const char *msg);
+void afficher_succes(const char *msg);
+void attendre_entree(void);
+void construire_chemin(char *chemin, const char *nom);
+int  lire_ligne(char *buf, int taille);
+
+
+
+#endif
