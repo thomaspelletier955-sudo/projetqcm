@@ -9,11 +9,11 @@
 #include "enseignant.h"
 #include "utils.h"
 
-/* ------------------------------------------------------------
- * verifier_mot_de_passe
- * Lit le mot de passe avec scanf %s et le compare a la constante.
- * Retourne 1 si correct, 0 sinon.
- * ------------------------------------------------------------ */
+/* 
+  verifier_mot_de_passe
+  Lit le mot de passe avec scanf %s et le compare a la constante.
+  Retourne 1 si correct, 0 sinon.
+ */
 int verifier_mot_de_passe(void) {
     char saisie[MAX_NOM];
     printf(JAUNE "Mot de passe enseignant : " RESET);
@@ -28,11 +28,11 @@ int verifier_mot_de_passe(void) {
     return 0;
 }
  
-/* ------------------------------------------------------------
- * saisir_oui_non
- * Lit un caractere o/n avec scanf %c.
- * Retourne 1 pour oui, 0 pour non.
- * ------------------------------------------------------------ */
+/*
+  saisir_oui_non
+  Lit un caractere o/n avec scanf %c.
+  Retourne 1 pour oui, 0 pour non.
+  */
 static int saisir_oui_non(void) {
     char c;
     scanf(" %c", &c);
