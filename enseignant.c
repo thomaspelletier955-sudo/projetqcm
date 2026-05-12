@@ -14,7 +14,7 @@
   Lit le mot de passe avec scanf %s et le compare a la constante.
   Retourne 1 si correct, 0 sinon.
  */
-int verifier_mot_de_passe(void) {
+int verifier_mot_de_passe() {
     char saisie[MAX_NOM];
     printf(JAUNE "Mot de passe enseignant : " RESET);
     if (!lire_mot(saisie, sizeof(saisie))) {
@@ -33,7 +33,7 @@ int verifier_mot_de_passe(void) {
   Lit un caractere o/n avec scanf %c.
   Retourne 1 pour oui, 0 pour non.
   */
-static int saisir_oui_non(void) {
+static int saisir_oui_non() {
     char c;
     scanf(" %c", &c);
     vider_buffer();
