@@ -27,7 +27,7 @@ int lister_qcm(char noms[MAX_QCM][MAX_NOM]) {
     int len;
 
     /* Generer la liste des .txt dans un fichier temporaire */
-    snprintf(commande, sizeof(commande),"ls %s*.txt",DOSSIER_QCM, FICHIER_LISTE);
+    snprintf(commande, sizeof(commande),"ls %s*.txt" 2>/dev/null | xargs -n1 basename > %s,DOSSIER_QCM, FICHIER_LISTE);
     system(commande);
 
     f = fopen(FICHIER_LISTE, "r");
