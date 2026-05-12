@@ -44,27 +44,16 @@ void construire_chemin(char *chemin, const char *nom) {
  Retourne 1 si ok, 0 sinon.
  */
 int lire_ligne(char *buf, int taille) {
-    int c;
-    /* Consommer le \n ou les espaces residuels avant la ligne */
-    c = getchar();
-    if (c == EOF) { buf[0] = '\0'; return 0; }
-    /* Si ce n'est pas un \n, c'est le debut de la ligne : on remet
-     * le caractere "dans le buffer" en le copiant en premier */
-    if (c != '\n') {
-        buf[0] = (char)c;
-        if (fgets(buf + 1, taille - 1, stdin) == NULL) {
-            buf[strcspn(buf, "\n")] = '\0';
-            return 1; /* on a deja le premier char */
+    /* Lire la ligne avec fgets */
+    if (fgets(buf, taille, stdin) != NULL) {
+        
+        /* Trouver le '\n' et le supprimer */
+        char *p = strchr(buf, '\n');
+        if (p) {
+            *p = '\0';
         }
-    } else {
-        /* Le \n etait residuel, on lit la vraie ligne */
-        if (fgets(buf, taille, stdin) == NULL) {
-            buf[0] = '\0';
-            return 0;
-        }
+        return 1; // Tout s'est bien passé
     }
-    buf[strcspn(buf, "\n")] = '\0';
-    return 1;
+    
+    return 0; // Erreur ou fin de fichier
 }
-
-
