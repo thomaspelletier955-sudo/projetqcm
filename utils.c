@@ -40,10 +40,11 @@ void lire(char *buf, int taille) {
 /* Lit un entier, vide le buffer et retourne la valeur (-1 si erreur) */
 int lire_int(void) {
     int n;
-    if (scanf("%d", &n) != 1) {
+    char reste;
+    /* On verifie que la saisie est bien un entier et rien d autre */
+    if (scanf("%d%c", &n, &reste) != 2 || reste != '\n') {
         vider_buffer();
         return -1;
     }
-    vider_buffer();
     return n;
 }
