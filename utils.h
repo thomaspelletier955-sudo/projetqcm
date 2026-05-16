@@ -14,7 +14,7 @@
 #define MAX_QCM          20
 #define NOTE_MAX         20
 
-/* Couleurs terminal */
+/* Couleur terminal */
 #define RESET  "\033[0m"
 #define ROUGE  "\033[31m"
 #define VERT   "\033[32m"
@@ -26,7 +26,7 @@
 #define FBLEU  "\033[44m"
 #define FMAG   "\033[45m"
 
-/* Structure d'une question */
+/* Structure d une question */
 typedef struct {
     char intitule[MAX_QUESTION];
     char propositions[MAX_PROPOSITIONS][MAX_QUESTION];
@@ -35,7 +35,7 @@ typedef struct {
     int  nb_bonnes_reponses;
 } Question;
 
-/* Structure d'un QCM complet */
+/* Structure d un QCM complet */
 typedef struct {
     char     nom[MAX_NOM];
     int      nb_questions;
@@ -52,7 +52,7 @@ void titre(void);
 void erreur(const char *msg);
 void ok(const char *msg);
 void attendre(void);
-/* Lit une ligne et enleve le \n final */
+/* Li une ligne et enleve le \n final */
 void lire(char *buf, int taille);
 /* Lit un entier et retourne sa valeur (-1 si erreur) */
 int  lire_int(void);
